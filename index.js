@@ -21,8 +21,6 @@ app.post('/', function(req, res){
     var presence= req.body.presence;
     var years= req.body.years;
     var season= req.body.season;
-    var emp_name = req.body.trainee_name;
-    var emp_email = req.body.trainee_email;
 
     db.connect(function(error){
         if(error) throw error;
@@ -37,14 +35,16 @@ app.post('/', function(req, res){
 
 //SET ROUTES
 app.get('/course', function(req, res){
-    db.connect(function(error){
-        if (error) console.log(error);
-        var sql ="SELECT * FROM course";
-        db.query(sql, function(error,result){
-            if (error) console.log(error);
+    db.connect(function (error){
+        if (error) throw error;
+        var sql = "SELECT * FROM course";
+        db.query(sql, function(error, result){
+            if(error) throw error;
             console.log(result);
-            return res.render(__dirname+'/course',{course: result});
-        });
+            res.render(__dirname+'/students', {course: result})
+        })
     });
 })
+
+
 app.listen(30036);
