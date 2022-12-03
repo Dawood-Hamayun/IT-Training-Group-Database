@@ -1,0 +1,30 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "A web based application for Database",
+  "main": "s",
+  "scripts": {
+    "test": "d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dawood-Hamayun/IT-Training-Group-Database.git"
+  },
+  "keywords": [
+    "IT",
+    "Training",
+    "Group"
+  ],
+  "author": "Dawood Hamayun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dawood-Hamayun/IT-Training-Group-Database/issues"
+  },
+  "homepage": "https://github.com/Dawood-Hamayun/IT-Training-Group-Database#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
